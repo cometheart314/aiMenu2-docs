@@ -192,3 +192,34 @@ section h3 { font-size: 18px; color: #0f3460; margin: 28px 0 8px; }
 .callout + p { margin-top: 12px; }
 /* 見出しの下の説明文を、広い画面では1行に収める（狭い画面では折り返す） */
 header p { max-width: 800px; }
+
+/* マニュアル（manual.html） */
+.toc { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 16px 24px; }
+.toc ol { padding-left: 20px; margin: 0; }
+.toc ol ol { margin-top: 4px; }
+.toc li { margin-bottom: 4px; }
+.toc a { color: #0066cc; text-decoration: none; }
+figure.shot { margin: 16px 0 20px; text-align: center; }
+figure.shot img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+figure.shot.small img { max-width: 420px; }
+figure.shot figcaption { font-size: 13px; color: #777; margin-top: 6px; }
+.manual section h3 { margin-top: 32px; }
+.manual dl dt { font-weight: 600; margin-top: 12px; }
+.manual dl dd { margin: 2px 0 0 0; }
+.icon-label { font-weight: 600; color: #0f3460; }
+
+@media print {
+  nav, footer, .no-print { display: none !important; }
+  header { padding: 32px 24px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: #fff; font-size: 12.5px; }
+  main { padding: 16px 0; max-width: none; }
+  section { margin-bottom: 24px; }
+  .manual > section { break-before: page; }
+  .manual > section.toc-section { break-before: auto; }
+  figure.shot { break-inside: avoid; }
+  figure.shot img { box-shadow: none; max-height: 330px; width: auto; }
+  h2, h3 { break-after: avoid; }
+  a { color: #1d1d1f; text-decoration: none; }
+  .callout { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+@page { size: A4; margin: 16mm 16mm 18mm; }

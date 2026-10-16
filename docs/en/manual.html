@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aiMenu2 Help</title>
+<meta name="description" content="User manual for aiMenu2">
+<link rel="stylesheet" href="../style.css?v=3">
+</head>
+<body>
+
+<nav>
+  <a href="../ja/manual.html">日本語</a>
+  <a href="./">aiMenu2 Home</a>
+  <a href="./#support">Support</a>
+</nav>
+
+<header>
+  <img class="appicon" src="../appicon.png" alt="aiMenu2 icon">
+  <h1>aiMenu2 Help</h1>
+  <p>Select, press, ask AI. A guide to using aiMenu2.</p>
+</header>
+
+<main class="manual">
+
+<section class="toc-section">
+  <div class="toc">
+    <ol>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#first-step">First Steps</a>
+        <ol>
+          <li><a href="#openrouter">OpenRouter Account and Credits</a></li>
+          <li><a href="#login">Logging in to OpenRouter</a></li>
+          <li><a href="#shortcut">Setting a Shortcut Key</a></li>
+        </ol>
+      </li>
+      <li><a href="#subscription">Subscription</a></li>
+      <li><a href="#settings">Settings</a>
+        <ol>
+          <li><a href="#settings-general">General</a></li>
+          <li><a href="#settings-models">Models</a></li>
+        </ol>
+      </li>
+      <li><a href="#chat">Using the Chat Window</a>
+        <ol>
+          <li><a href="#prompt-view">Prompt View</a></li>
+          <li><a href="#voice">Voice Input</a></li>
+          <li><a href="#response-view">Response View</a></li>
+          <li><a href="#fusion">Fusion (Ask Several AIs)</a></li>
+          <li><a href="#image">Generating and Editing Images</a></li>
+          <li><a href="#topics">Topic View and Archives</a></li>
+        </ol>
+      </li>
+      <li><a href="#templates">Prompt Templates</a></li>
+      <li><a href="#usage">Checking Usage and Costs</a></li>
+      <li><a href="#help">Troubleshooting</a></li>
+    </ol>
+  </div>
+</section>
+
+<section id="intro">
+  <h2>Introduction</h2>
+  <p>Generative AI models such as ChatGPT, Claude, Gemini, Perplexity, DeepSeek, and Grok keep appearing and improving every day. aiMenu2 is an AI assistant that lets you choose the newest and best model for your purpose and budget from more than 300 models, at any time.</p>
+  <p>From any app, such as Mail, a browser, an editor, or a spreadsheet, you can call aiMenu2's AI menu on the text you select with a single shortcut key. Menus such as “Translate”, “Summarize”, “Proofread”, and “Investigate” are included, and you can add or change them freely.</p>
+
+  <h3>Features</h3>
+  <ul>
+    <li><strong>More than 300 models:</strong> Use ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Grok, and more through <a href="https://openrouter.ai/">OpenRouter</a>. With “Auto”, OpenRouter picks a model for each question.</li>
+    <li><strong>Pay only for what you use:</strong> AI fees are deducted from your OpenRouter credits for what you use. The cost of each response is shown, so you always know what you spend.</li>
+    <li><strong>Works from any app:</strong> Select text and press the shortcut key to open the prompt menu.</li>
+    <li><strong>Fusion:</strong> Several models answer the same question, and the model you selected combines their answers into one.</li>
+    <li><strong>Images and voice:</strong> Generate and edit images, have responses read aloud with high-quality voices, and enter prompts by voice.</li>
+    <li><strong>Rich formatting:</strong> Responses are shown with Markdown, syntax highlighting, and math (TeX).</li>
+  </ul>
+</section>
+
+<section id="first-step">
+  <h2>First Steps</h2>
+  <p>After downloading aiMenu2 from the App Store, create an OpenRouter account, buy credits, and log in to OpenRouter from aiMenu2. Then set a shortcut key so that you can call the AI menu from any app.</p>
+
+  <h3 id="openrouter">OpenRouter Account and Credits</h3>
+  <p>aiMenu2 sends AI requests through OpenRouter. With one OpenRouter account, you can use models from many AI providers.</p>
+  <ol class="steps">
+    <li>Open <a href="https://openrouter.ai/">https://openrouter.ai/</a> in your browser, click “Sign in” at the top right, and choose “Sign up” to create an account. You can also sign up with a Google account and others.</li>
+    <li>Open “Credits” from the account menu at the top right and buy credits with “Add Credits”. Credits are prepaid, and only what you use is deducted. About $10 is enough to start.</li>
+  </ol>
+
+  <h3 id="login">Logging in to OpenRouter</h3>
+  <p>Open aiMenu2 &gt; Preferences… &gt; General and click “<strong>Log in to OpenRouter…</strong>” above the API key field. OpenRouter opens in your browser; log in and authorize aiMenu2. When you return to aiMenu2, the API key is set automatically.</p>
+  <figure class="shot"><img src="../images/en/settings-general.png" alt="General settings, with the Log in to OpenRouter button above the API key field"></figure>
+  <div class="callout">
+    <strong>About limits and expiration:</strong> On OpenRouter's authorization page, you can set a spending limit and an expiration date for the new API key. If you do, aiMenu2 can no longer use AI when the limit is reached or the key expires. You can change them later at <a href="https://openrouter.ai/settings/keys">openrouter.ai/settings/keys</a>. aiMenu2 tells you right after logging in if the key has a limit or an expiration date.
+  </div>
+  <p class="note">You can also create an API key yourself on OpenRouter's Keys page and paste it into the API key field.</p>
+
+  <h3 id="shortcut">Setting a Shortcut Key</h3>
+  <p>Select text in another app, right-click it (or click while holding control), and choose “aiMenu2...” in the Services menu to open aiMenu2's prompt menu. If you assign a shortcut key to this Services menu item, you can open the menu just by pressing the key.</p>
+  <p><strong>1. Turn on the Services menu item:</strong> Open System Settings &gt; Keyboard &gt; Keyboard Shortcuts… &gt; Services, and turn on “aiMenu2...” under “Text”.</p>
+  <figure class="shot"><img src="../images/en/services-list.png" alt="aiMenu2... turned on in the Services list of System Settings"></figure>
+  <p><strong>2. Assign a shortcut key:</strong> In the same window, select “App Shortcuts” and click “+”. Leave “Application” set to “All Applications”, enter <code>aiMenu2...</code> as the “Menu title”, and assign the key you want (<kbd>F2</kbd> in this example) as the “Keyboard shortcut”. The menu title must match the Services menu item exactly, so type three periods.</p>
+  <figure class="shot"><img src="../images/en/shortcut-dialog.png" alt="Dialog for adding an app shortcut"></figure>
+  <p>The assigned key appears in “Shortcut for Services Menu” in aiMenu2's General settings. Click “Change” next to it to open the keyboard shortcuts in System Settings.</p>
+  <p><strong>More convenient ways:</strong> If your mouse has extra buttons, assign aiMenu2's shortcut key to one of them to open the prompt menu with a single click. With a trackpad, a utility such as <a href="https://folivora.ai/">BetterTouchTool</a> lets you assign it to a gesture, such as a three-finger tap.</p>
+</section>
+
+<section id="subscription">
+  <h2>Subscription</h2>
+  <p>aiMenu2 is available as a monthly or yearly subscription. You can try it free for 7 days after installing it.</p>
+  <p>After 7 days, subscription information appears at startup. You can keep using the app without subscribing, but you will be asked to subscribe after each AI response. You can also subscribe from aiMenu2 &gt; License.</p>
+  <p class="note">AI usage fees are deducted from your OpenRouter credits, separately from the subscription.</p>
+</section>
+
+<section id="settings">
+  <h2>Settings</h2>
+  <p>Choose aiMenu2 &gt; Preferences…, or click the gear button at the bottom left of the chat window, to open the settings. There are two tabs: General and Models.</p>
+
+  <h3 id="settings-general">General</h3>
+  <p>The General tab sets how aiMenu2 works overall (see the screenshot in the <a href="#login">previous section</a>). “Revert to Default” restores the initial settings.</p>
+  <dl>
+    <dt>AutoStart at Login / Save Topics to iCloud</dt>
+    <dd>Choose whether to start aiMenu2 when you log in, and whether to save your conversation history in iCloud Drive to share it between Macs.</dd>
+    <dt>Appearance Theme, Text Display, Topic Items Max, Sound Effect</dt>
+    <dd>Set light or dark appearance, text size, the number of topics to keep, and sound effects.</dd>
+    <dt>Hide Reasoning Process</dt>
+    <dd>Hides the thinking process that reasoning models show before the answer.</dd>
+    <dt>Speech engine, TTS model, TTS voice</dt>
+    <dd>Choose macOS voices or high-quality OpenRouter voices for reading responses aloud. With OpenRouter, you can also choose the model and voice. With macOS, choose the voice and speed (rate) under “Read out Voice”.</dd>
+    <dt>Voice input model</dt>
+    <dd>Chooses the model that turns your voice into text.</dd>
+    <dt>Fusion panel</dt>
+    <dd>Chooses which models answer in Fusion. “Quality” uses larger models; “Speed” uses lighter models that answer faster and cheaper.</dd>
+    <dt>OpenRouter API key</dt>
+    <dd>Set automatically by “Log in to OpenRouter…”. Click <a href="https://openrouter.ai/">https://openrouter.ai/</a> on the right to open OpenRouter's site.</dd>
+    <dt>Base System Prompt</dt>
+    <dd>Text that tells the AI in advance how to answer and what role to play. It is sent with every request, together with the model's additional system prompt.</dd>
+  </dl>
+
+  <h3 id="settings-models">Models</h3>
+  <p>The Models tab chooses which models appear in the chat window's model menu, and sets options for each model. Select a model in the list on the left to see its details on the right.</p>
+  <figure class="shot"><img src="../images/en/settings-models.png" alt="Models tab, with the model list on the left and details of the selected model on the right"></figure>
+  <dl>
+    <dt>temperature</dt>
+    <dd>Controls how varied the answers are. Values near 0 give consistent, predictable answers; values near 1 give more creative and varied answers.</dd>
+    <dt>max_tokens</dt>
+    <dd>The maximum length of one response. Tokens are chunks of words or symbols; one English word is about 1–2 tokens. If the limit is reached, the response is cut off and a warning appears at the end.</dd>
+    <dt>pricing $/M</dt>
+    <dd>The price per million tokens, for input (prompt) and output (completion).</dd>
+    <dt>input modalities</dt>
+    <dd>The kinds of data you can send to the model. You can attach images to models that list image. PDFs can be attached to any model.</dd>
+    <dt>provider priority</dt>
+    <dd>When several providers offer the same model, chooses which to prefer (Default, Lowest price, Fastest output, or Lowest latency).</dd>
+    <dt>reasoning</dt>
+    <dd>Sets how deeply a reasoning model thinks (Default, None, Low, Medium, High, or Max). It is disabled for models that do not support reasoning.</dd>
+    <dt>additional system prompt</dt>
+    <dd>A system prompt sent only to this model.</dd>
+  </dl>
+  <p><strong>Auto:</strong> “openrouter/auto:low”, “openrouter/auto:medium”, and “openrouter/auto:max” in the list appear in the chat window as “Auto (Budget)”, “Auto (Balanced)”, and “Auto (Best)”. OpenRouter picks a suitable model for each question.</p>
+  <p><strong>Adding and removing models:</strong> Click “+” at the bottom left to open the list of models offered by OpenRouter and add them to aiMenu2. Select a model and click “−” to remove it.</p>
+</section>
+
+<section id="chat">
+  <h2>Using the Chat Window</h2>
+  <p>Start aiMenu2 or choose File &gt; Open Chat Window to open the chat window. It has three parts: the topic view on the left, the response view at the top right, and the prompt view at the bottom right. Drag the borders to resize them.</p>
+  <figure class="shot"><img src="../images/en/chat-window.png" alt="Chat window, with topics on the left, the response at the top right, and the prompt field at the bottom right"></figure>
+
+  <h3 id="prompt-view">Prompt View</h3>
+  <p>Type your question (prompt) in the prompt view, choose a model from the menu at the bottom, and click the “<kbd>cmd</kbd>+<kbd>↩</kbd>” button at the bottom right to send it to the AI. You can also press <kbd>cmd</kbd>+<kbd>↩</kbd>, or press <kbd>return</kbd> twice.</p>
+  <p>Click the “<kbd>cmd</kbd>+<kbd>⌫</kbd>” button at the bottom left to start a new topic and clear the context of the conversation. Until you do, the AI remembers the earlier questions and answers in the same topic. You can also press <kbd>cmd</kbd>+<kbd>⌫</kbd>.</p>
+  <p>The buttons at the bottom do the following:</p>
+  <ul>
+    <li><span class="icon-label">Paper clip:</span> Attaches an image or PDF. Click it and drop a file on the drop area that appears. Images work with models that support images; PDFs work with any model.</li>
+    <li><span class="icon-label">Microphone:</span> Starts voice input (see <a href="#voice">Voice Input</a>).</li>
+    <li><span class="icon-label">People icon (Fusion):</span> When orange, your next questions use Fusion (see <a href="#fusion">Fusion</a>).</li>
+  </ul>
+
+  <h3 id="voice">Voice Input</h3>
+  <ul>
+    <li>Click the microphone button, or press the <kbd>control</kbd> key twice, to start recording. The button turns into a red waveform.</li>
+    <li>Two seconds after you stop speaking, that part is turned into text and added to the prompt, and recording continues.</li>
+    <li>While recording, click anywhere in the window or press <kbd>control</kbd> once to split right away.</li>
+    <li>Double-click or press <kbd>control</kbd> twice to stop recording.</li>
+  </ul>
+  <p class="note">The first time, macOS asks for permission to use the microphone. You can also allow it in System Settings &gt; Privacy &amp; Security &gt; Microphone.</p>
+
+  <h3 id="response-view">Response View</h3>
+  <p>AI responses appear here. Each response ends with the name of the model that answered and the cost of the request in dollars and yen. From the second response in a topic, the topic total is shown too.</p>
+  <p>When a model such as Perplexity searches the web, the numbers such as [1] and [2] in the text link to the sources, which are also listed under “Sources” at the end of the response.</p>
+  <p>The buttons at the top right of the response view do the following:</p>
+  <ul>
+    <li><span class="icon-label">Read aloud:</span> When on, responses are read aloud. Click it while reading to stop.</li>
+    <li><span class="icon-label">Copy:</span> Copies the conversation to the clipboard.</li>
+    <li><span class="icon-label">Share:</span> Opens a save dialog to save the conversation as a PDF file.</li>
+  </ul>
+  <p>Choose a prompt template from “Template” at the top left to run it (see <a href="#templates">Prompt Templates</a>). Hold <kbd>shift</kbd> while choosing to put the template in the prompt view without running it.</p>
+
+  <h3 id="fusion">Fusion (Ask Several AIs)</h3>
+  <p>Turn the people icon orange and ask a question, and several models answer it while searching the web. An analyst model compares their answers, and the model you selected combines them into one response. Fusion suits important questions and questions where opinions may differ.</p>
+  <figure class="shot"><img src="../images/en/fusion.png" alt="A Fusion response, with Fusion: answers and analysis of each model collapsed at the top"></figure>
+  <p>Click “▶ Fusion: answers and analysis of each model” at the top of the response to see each model's answer and the analysis of where they agree and differ.</p>
+  <figure class="shot"><img src="../images/en/fusion-panel.png" alt="The Fusion panel opened, showing each model's answer"></figure>
+  <ul>
+    <li>Choose which models answer with “Fusion panel” in the General settings.</li>
+    <li>Because several models are asked, Fusion costs about 4–5 times as much as a normal request, and a response can take a minute or two.</li>
+    <li>Write <code>{{fusion}}</code> in a template to use Fusion for that template only.</li>
+  </ul>
+
+  <h3 id="image">Generating and Editing Images</h3>
+  <p>Add and select a model that can generate images (for example, <code>google/gemini-3.1-flash-image</code>) in the Models settings, and ask it to “draw ...”. The image appears in the response. Then ask for changes, such as “make it blue”, and the model redraws the previous image.</p>
+  <figure class="shot"><img src="../images/en/image-edit.png" alt="After drawing a red apple, asking to make the apple blue redraws it as a blue apple"></figure>
+  <p>Click an image to open a save dialog and save it as a file.</p>
+
+  <h3 id="topics">Topic View and Archives</h3>
+  <p>The topic view lists your conversations (topics) with the AI. Select a topic to show it in the response view; ask a new question to continue it with the same context. Topics are named automatically from the first question and response.</p>
+  <ul>
+    <li>Double-click a topic to rename it. Press <kbd>delete</kbd> to delete it.</li>
+    <li>Right-click a topic to rename, delete, or move it to the archives. Hover over a topic to see its total cost.</li>
+    <li>Type in the search field at the top to search topic names and contents.</li>
+    <li>When the number of topics reaches “Topic Items Max”, the oldest are deleted automatically. Topics moved to the archives are never deleted automatically.</li>
+  </ul>
+  <p>Click the box button at the bottom left of the chat window to open the archive window. Archives are grouped into categories. From the right-click menu, you can rename or delete categories, and “Unarchive” moves a topic back to the topic view.</p>
+</section>
+
+<section id="templates">
+  <h2>Prompt Templates</h2>
+  <p>Save the prompts you use often as templates, and run them from the menu at any time. The menu is hierarchical, so you can group templates into categories. There are three ways to call templates:</p>
+  <ul>
+    <li><strong>From the Services menu:</strong> Select text in another app, right-click it, and choose Services &gt; aiMenu2..., or press your <a href="#shortcut">shortcut key</a>. The template runs with the selected text.</li>
+    <li><strong>From the status menu:</strong> Click the “ai” balloon icon in the menu bar to open the prompt menu. The template runs with the text on the clipboard.</li>
+    <li><strong>From the chat window:</strong> Choose from “Template” at the top left of the response view.</li>
+  </ul>
+  <figure class="shot small"><img src="../images/en/status-menu.png" alt="Prompt menu opened from the ai icon in the menu bar"></figure>
+
+  <h3>Template Editor</h3>
+  <p>Choose File &gt; Open Template Editor, or click the button to the right of “Template” in the chat window, to open the template editor.</p>
+  <figure class="shot"><img src="../images/en/template-editor.png" alt="Template editor, with the template list on the left and the title, model, and prompt on the right"></figure>
+  <ul>
+    <li>Right-click the list on the left to add templates or categories. You can also use “+” and “−” at the bottom left.</li>
+    <li>On the right, enter the title, the model to use, and the prompt. If no model is specified, the model currently selected in the chat window is used.</li>
+    <li>Turn on “New Topic” to clear the context of the conversation before running.</li>
+    <li>Turn on “Send” to run the template right away. When it is off, the template is only put in the prompt view.</li>
+  </ul>
+
+  <h3>Macros</h3>
+  <p>Write these macros in a prompt to insert text or change how it runs. Right-click the prompt field to insert them from the menu.</p>
+  <table class="macros">
+    <tr><th>Macro</th><th>What it does</th></tr>
+    <tr><td><code>{{clipboard}}</code></td><td>Replaced with the selected text or the text on the clipboard.</td></tr>
+    <tr><td><code>{{copy response}}</code></td><td>Copies the response to the clipboard.</td></tr>
+    <tr><td><code>{{speech response}}</code></td><td>Reads the response aloud.</td></tr>
+    <tr><td><code>{{hide thinking}}</code></td><td>Hides the thinking process of reasoning models.</td></tr>
+    <tr><td><code>{{effort high}}</code></td><td>Sets the reasoning effort. You can use <code>none</code>, <code>low</code>, <code>medium</code>, <code>high</code>, or <code>max</code>.</td></tr>
+    <tr><td><code>{{fusion}}</code></td><td>Uses Fusion for this template only.</td></tr>
+    <tr><td><code>{{compact window}}</code></td><td>Makes the chat window compact (<code>{{minimize window}}</code> does the same).</td></tr>
+    <tr><td><code>{{normal window}}</code></td><td>Returns the chat window to the normal layout.</td></tr>
+  </table>
+</section>
+
+<section id="usage">
+  <h2>Checking Usage and Costs</h2>
+  <p>Choose File &gt; Usage and Costs… to see the following. Click “Open OpenRouter Activity” to see detailed activity on OpenRouter's site.</p>
+  <ul>
+    <li>Your OpenRouter credit balance, and the total purchased and used</li>
+    <li>The current API key's usage today, this week, and this month, and its limit and expiration date</li>
+    <li>Monthly totals recorded by aiMenu2 (for the topics and archives you keep)</li>
+  </ul>
+</section>
+
+<section id="help">
+  <h2>Troubleshooting</h2>
+  <dl>
+    <dt>I get no response to my question</dt>
+    <dd>Check your OpenRouter credit balance and your API key's limit and expiration date in File &gt; Usage and Costs…. Trying another model or a new topic may also help.</dd>
+    <dt>Nothing happens when I press the shortcut key</dt>
+    <dd>Make sure “aiMenu2...” is turned on under Services in System Settings, and that the menu title of the app shortcut is <code>aiMenu2...</code> (three periods).</dd>
+    <dt>Voice input does not work</dt>
+    <dd>Allow aiMenu2 to use the microphone in System Settings &gt; Privacy &amp; Security &gt; Microphone.</dd>
+  </dl>
+  <p>For other questions or bug reports, please visit the <a href="https://cometheart314.github.io/aiMenu2-docs/en/#support">aiMenu2 support page</a>. You can also open it from Help &gt; aiMenu2 Support Page.</p>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2026 Artman21 Inc.<br>
+  <a href="./">aiMenu2 Home</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a>
+</footer>
+
+</body>
+</html>

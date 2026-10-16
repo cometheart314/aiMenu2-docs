@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aiMenu2 ヘルプ</title>
+<meta name="description" content="aiMenu2 の使い方のマニュアル">
+<link rel="stylesheet" href="../style.css?v=3">
+</head>
+<body>
+
+<nav>
+  <a href="../en/manual.html">English</a>
+  <a href="./">aiMenu2 トップ</a>
+  <a href="./#support">サポート</a>
+</nav>
+
+<header>
+  <img class="appicon" src="../appicon.png" alt="aiMenu2 のアイコン">
+  <h1>aiMenu2 ヘルプ</h1>
+  <p>選んで、タッチ、すぐ AI。aiMenu2 の使い方をまとめたマニュアルです。</p>
+</header>
+
+<main class="manual">
+
+<section class="toc-section">
+  <div class="toc">
+    <ol>
+      <li><a href="#intro">はじめに</a></li>
+      <li><a href="#first-step">最初の一歩</a>
+        <ol>
+          <li><a href="#openrouter">OpenRouter のアカウントとクレジット</a></li>
+          <li><a href="#login">OpenRouter にログインする</a></li>
+          <li><a href="#shortcut">ショートカットキーの設定</a></li>
+        </ol>
+      </li>
+      <li><a href="#subscription">サブスクリプション</a></li>
+      <li><a href="#settings">設定</a>
+        <ol>
+          <li><a href="#settings-general">一般設定</a></li>
+          <li><a href="#settings-models">モデル設定</a></li>
+        </ol>
+      </li>
+      <li><a href="#chat">チャットウィンドウの操作</a>
+        <ol>
+          <li><a href="#prompt-view">プロンプトビュー</a></li>
+          <li><a href="#voice">音声入力</a></li>
+          <li><a href="#response-view">レスポンスビュー</a></li>
+          <li><a href="#fusion">Fusion（複数の AI に相談）</a></li>
+          <li><a href="#image">画像の生成と続けての編集</a></li>
+          <li><a href="#topics">トピックビューとアーカイブ</a></li>
+        </ol>
+      </li>
+      <li><a href="#templates">プロンプトテンプレート</a></li>
+      <li><a href="#usage">使用額の確認</a></li>
+      <li><a href="#help">困ったときは</a></li>
+    </ol>
+  </div>
+</section>
+
+<section id="intro">
+  <h2>はじめに</h2>
+  <p>生成 AI は、ChatGPT、Claude、Gemini、Perplexity、DeepSeek、Grok などが次々に登場し、日々進化しています。aiMenu2 は、300 種類を超えるモデルの中から、目的や予算に合わせて、いつでも最新・最適なモデルを選んで使える AI アシスタントです。</p>
+  <p>メール、ブラウザ、エディタ、表計算など、どのアプリで選んだテキストに対しても、ショートカットキーひとつで AI のメニューを呼び出せます。「翻訳する」「調べる」「校正する」「要約する」などのメニューがはじめから入っていて、自由に追加・変更できます。</p>
+
+  <h3>特徴</h3>
+  <ul>
+    <li><strong>300 以上のモデル：</strong><a href="https://openrouter.ai/">OpenRouter</a> を通じて、ChatGPT、Claude、Gemini、Perplexity、DeepSeek、Grok などのモデルを使えます。「おまかせ」にすると、質問に合わせて OpenRouter がモデルを選びます。</li>
+    <li><strong>使った分だけの料金：</strong>AI の利用料金は、使った分だけ OpenRouter のクレジットから差し引かれます。回答ごとに費用を表示するので、使いすぎの心配がありません。</li>
+    <li><strong>どのアプリからでも：</strong>テキストを選んでショートカットキーを押すだけで、プロンプトのメニューが開きます。</li>
+    <li><strong>Fusion：</strong>複数のモデルが同じ質問に答え、選んだモデルが 1 つの回答にまとめます。</li>
+    <li><strong>画像・音声：</strong>画像の生成と続けての編集、高品質な読み上げ、マイクでの音声入力に対応しています。</li>
+    <li><strong>豊富な書式：</strong>回答は Markdown、構文ハイライト、数式（TeX）などで読みやすく表示されます。</li>
+  </ul>
+</section>
+
+<section id="first-step">
+  <h2>最初の一歩</h2>
+  <p>App Store からダウンロードしたら、まず OpenRouter のアカウントを作ってクレジットを購入し、aiMenu2 から OpenRouter にログインします。次に、どのアプリからでも AI のメニューを呼び出せるように、ショートカットキーを設定します。</p>
+
+  <h3 id="openrouter">OpenRouter のアカウントとクレジット</h3>
+  <p>aiMenu2 は、AI への問い合わせに OpenRouter を使います。OpenRouter のアカウントがあれば、多くの AI 事業者のモデルを、1 つのアカウントでまとめて使えます。</p>
+  <ol class="steps">
+    <li>ブラウザで <a href="https://openrouter.ai/">https://openrouter.ai/</a> を開き、右上の「Sign in」から「Sign up」を選んでアカウントを作ります。メールアドレスのほか、Google アカウントなどでも登録できます。</li>
+    <li>右上のアカウントのメニューから「Credits」を開き、「Add Credits」でクレジットを購入します。料金は前払いで、使った分だけ差し引かれます。はじめは 10 ドル程度で十分です。</li>
+  </ol>
+
+  <h3 id="login">OpenRouter にログインする</h3>
+  <p>メニュー「aiMenu2 &gt; 設定 &gt; 一般」を開き、API キー欄の上の「<strong>OpenRouter にログイン…</strong>」を押します。ブラウザで OpenRouter の画面が開くので、ログインして許可してください。aiMenu2 に戻ると、API キーが自動で設定されています。</p>
+  <figure class="shot"><img src="../images/ja/settings-general.png" alt="設定の一般タブ。API キー欄の上に「OpenRouter にログイン…」ボタンがある"></figure>
+  <div class="callout">
+    <strong>上限と有効期限について：</strong>OpenRouter の許可画面では、作られる API キーに使用額の上限と有効期限を付けられます。付けた場合は、上限に達するか期限を過ぎると、aiMenu2 から AI を使えなくなります。あとから <a href="https://openrouter.ai/settings/keys">openrouter.ai/settings/keys</a> で変更できます。上限や期限が付いているときは、ログインの直後に aiMenu2 がお知らせします。
+  </div>
+  <p class="note">OpenRouter の「Keys」のページで自分で作った API キーを、API キー欄に貼り付けて使うこともできます。</p>
+
+  <h3 id="shortcut">ショートカットキーの設定</h3>
+  <p>ほかのアプリでテキストを選び、右クリック（または control キーを押しながらクリック）して、サービスメニューの「aiMenu2...」を選ぶと、aiMenu2 のプロンプトメニューが開きます。サービスメニューにショートカットキーを割り当てておくと、キーを押すだけでこのメニューを開けます。</p>
+  <p><strong>1. サービスメニューを有効にする：</strong>「システム設定 &gt; キーボード &gt; キーボードショートカット… &gt; サービス」を開き、「テキスト」の中の「aiMenu2...」をオンにします。</p>
+  <figure class="shot"><img src="../images/ja/services-list.png" alt="システム設定のサービスの一覧で aiMenu2... をオンにしている"></figure>
+  <p><strong>2. ショートカットキーを割り当てる：</strong>同じ画面の「アプリのショートカット」で「＋」を押します。「アプリケーション」は「すべてのアプリケーション」のまま、「メニュータイトル」に <code>aiMenu2...</code> と入力し、「キーボードショートカット」に使いたいキー（この例では <kbd>F2</kbd>）を割り当てます。メニュータイトルはサービスメニューの名前と同じでないと動かないので、ピリオドは半角で 3 つ入れてください。</p>
+  <figure class="shot"><img src="../images/ja/shortcut-dialog.png" alt="アプリのショートカットの登録画面"></figure>
+  <p>割り当てたキーは、aiMenu2 の「設定 &gt; 一般」の「サービスメニューショートカット」に表示されます。その横の「変更」を押すと、システム設定のキーボードショートカットの画面が開きます。</p>
+  <p><strong>さらに便利な使い方：</strong>ボタンの多いマウスでは、ボタンの 1 つに aiMenu2 のショートカットキーを割り当てると、ボタンを押すだけでプロンプトメニューが開きます。トラックパッドでは、<a href="https://folivora.ai/">BetterTouchTool</a> などで 3 本指のタップなどのジェスチャーに割り当てられます。</p>
+</section>
+
+<section id="subscription">
+  <h2>サブスクリプション</h2>
+  <p>aiMenu2 は、月額プランと年額プランのサブスクリプションでご利用いただけます。インストールから 7 日間は無料でお試しいただけます。</p>
+  <p>7 日間を過ぎると、起動時にサブスクリプションの案内が表示されます。登録しなくてもアプリは引き続き使えますが、AI の回答のたびに登録をお願いする画面が表示されます。メニュー「aiMenu2 &gt; ライセンス」からも登録できます。</p>
+  <p class="note">AI の利用料金は、サブスクリプションとは別に、OpenRouter のクレジットから差し引かれます。</p>
+</section>
+
+<section id="settings">
+  <h2>設定</h2>
+  <p>メニュー「aiMenu2 &gt; 設定」を選ぶか、チャットウィンドウ左下の歯車のボタンを押すと、設定のウィンドウが開きます。「一般」と「モデル」の 2 つのタブがあります。</p>
+
+  <h3 id="settings-general">一般設定</h3>
+  <p>「一般」タブでは、aiMenu2 全体の動作を設定します（画面は<a href="#login">前の節</a>を参照）。「デフォルトに戻す」を押すと、最初の設定に戻ります。</p>
+  <dl>
+    <dt>ログイン時に自動起動／トピック履歴を iCloud に保存</dt>
+    <dd>Mac にログインしたときに aiMenu2 を起動するか、会話の履歴を iCloud Drive に保存して複数の Mac で共有するかを選びます。</dd>
+    <dt>外観モード・文字表示・最大トピック数・効果音</dt>
+    <dd>画面の明るさ（ライト／ダーク）、文字の大きさ、保存しておくトピックの数、効果音を設定します。</dd>
+    <dt>思考プロセスを隠す</dt>
+    <dd>推論するモデルが回答の前に考えた過程を、表示しないようにします。</dd>
+    <dt>読み上げエンジン・読み上げモデル・読み上げの声</dt>
+    <dd>回答の読み上げに、macOS の音声と OpenRouter の高品質な音声のどちらを使うかを選びます。OpenRouter を選んだときは、モデルと声も選べます。macOS を選んだときは、下の「読み上げ音声」と速度（rate）で声を選びます。</dd>
+    <dt>音声入力モデル</dt>
+    <dd>マイクの音声を文字にするモデルを選びます。</dd>
+    <dt>Fusion のパネル</dt>
+    <dd>Fusion で答えるモデルの組み合わせを選びます。「品質重視」は大きなモデル、「速度重視」は軽いモデルで、速く安く答えます。</dd>
+    <dt>OpenRouter API キー</dt>
+    <dd>「OpenRouter にログイン…」で自動で設定されます。右の <a href="https://openrouter.ai/">https://openrouter.ai/</a> を押すと、OpenRouter のサイトが開きます。</dd>
+    <dt>共通システムプロンプト</dt>
+    <dd>AI に、回答の仕方や役割をあらかじめ伝える文です。モデル設定の「追加システムプロンプト」とあわせて、問い合わせのたびに AI に送られます。</dd>
+  </dl>
+
+  <h3 id="settings-models">モデル設定</h3>
+  <p>「モデル」タブでは、チャットウィンドウのモデル選択メニューに出すモデルを選び、モデルごとの設定をします。左の一覧でモデルを選ぶと、右にそのモデルの詳しい情報が表示されます。</p>
+  <figure class="shot"><img src="../images/ja/settings-models.png" alt="設定のモデルタブ。左にモデルの一覧、右に選んだモデルの情報"></figure>
+  <dl>
+    <dt>テンパラチャー</dt>
+    <dd>回答のばらつきを決めます。0 に近いほど決まった安定した回答に、1 に近いほど創造的で多様な回答になります。</dd>
+    <dt>最大トークン数</dt>
+    <dd>1 回の回答の長さの上限です。トークンは単語や記号のかたまりで、日本語 1 文字はおよそ 1〜2 トークンです。上限を超えると回答が途中で切れ、回答の最後に警告が表示されます。</dd>
+    <dt>価格 $/M</dt>
+    <dd>100 万トークンあたりの料金です。入力（prompt）と出力（completion）で違います。</dd>
+    <dt>入力モダリティ</dt>
+    <dd>そのモデルに送れるデータの種類です。image があるモデルには画像を添付できます。PDF はどのモデルにも添付できます。</dd>
+    <dt>プロバイダ優先</dt>
+    <dd>同じモデルを提供する会社が複数あるときに、どれを優先して選ぶかを指定します（標準・価格優先・速度優先・応答の速さ優先）。</dd>
+    <dt>推論</dt>
+    <dd>推論するモデルが、どれだけ深く考えるかを指定します（標準・なし・低・中・高・最大）。推論に対応していないモデルでは選べません。</dd>
+    <dt>追加システムプロンプト</dt>
+    <dd>そのモデルだけに送るシステムプロンプトです。</dd>
+  </dl>
+  <p><strong>おまかせ：</strong>一覧の「openrouter/auto:low」「openrouter/auto:medium」「openrouter/auto:max」は、チャットウィンドウでは「おまかせ（安さ優先）」「おまかせ（バランス）」「おまかせ（高性能）」と表示されます。質問の内容に合わせて、OpenRouter が適したモデルを選びます。</p>
+  <p><strong>モデルの追加・削除：</strong>左下の「＋」を押すと、OpenRouter が提供しているモデルの一覧が開き、aiMenu2 に追加できます。モデルを選んで「−」を押すと削除できます。</p>
+</section>
+
+<section id="chat">
+  <h2>チャットウィンドウの操作</h2>
+  <p>aiMenu2 を起動するか、メニュー「ファイル &gt; チャットウィンドウ」を選ぶと、チャットウィンドウが開きます。チャットウィンドウは、左のトピックビュー、右上のレスポンスビュー、右下のプロンプトビューに分かれています。境界線をドラッグすると、大きさを変えられます。</p>
+  <figure class="shot"><img src="../images/ja/chat-window.png" alt="チャットウィンドウ。左にトピック、右上に回答、右下にプロンプトの入力欄"></figure>
+
+  <h3 id="prompt-view">プロンプトビュー</h3>
+  <p>プロンプトビューに質問（プロンプト）を入力し、下のメニューで使うモデルを選んで、右下の「<kbd>cmd</kbd>+<kbd>↩</kbd>」ボタンを押すと、AI に送られます。<kbd>cmd</kbd>+<kbd>↩</kbd> を押すか、<kbd>return</kbd> キーを 2 回続けて押しても送れます。</p>
+  <p>左下の「<kbd>cmd</kbd>+<kbd>⌫</kbd>」ボタンを押すと、新しいトピックになり、それまでの会話の文脈がクリアされます。押さない限り、同じトピックの中では前の質問と回答を覚えたまま会話できます。<kbd>cmd</kbd>+<kbd>⌫</kbd> キーでも新しいトピックにできます。</p>
+  <p>下のボタンには、次の働きがあります。</p>
+  <ul>
+    <li><span class="icon-label">クリップ：</span>画像や PDF を添付します。押すとドロップする場所が開くので、ファイルをドロップします。画像は、画像に対応したモデルで使えます。PDF はどのモデルでも使えます。</li>
+    <li><span class="icon-label">マイク：</span>音声入力を始めます（<a href="#voice">音声入力</a>）。</li>
+    <li><span class="icon-label">人のアイコン（Fusion）：</span>オレンジにすると、次の質問から Fusion を使います（<a href="#fusion">Fusion</a>）。</li>
+  </ul>
+
+  <h3 id="voice">音声入力</h3>
+  <ul>
+    <li>マイクボタンを押すか、<kbd>control</kbd> キーを 2 回押すと録音が始まり、マイクのボタンが赤い波形になります。</li>
+    <li>話し終えて 2 秒たつと、その部分を文字にしてプロンプトに追加し、そのまま次の発話を待ちます。</li>
+    <li>録音中にウィンドウの中をクリックするか、<kbd>control</kbd> キーを 1 回押すと、すぐに区切って文字にします。</li>
+    <li>ダブルクリックするか、<kbd>control</kbd> キーを 2 回押すと、録音を終えます。</li>
+  </ul>
+  <p class="note">はじめて使うときは、macOS がマイクの使用の許可を求めます。「システム設定 &gt; プライバシーとセキュリティ &gt; マイク」でも許可できます。</p>
+
+  <h3 id="response-view">レスポンスビュー</h3>
+  <p>AI の回答が表示されます。回答の最後には、実際に答えたモデルの名前と、その問い合わせの費用（ドルと円）が表示されます。同じトピックで 2 回目以降の回答には、トピックの合計（トピック計）も表示されます。</p>
+  <p>Perplexity のモデルなどが Web を検索して答えたときは、本文の［1］［2］などの番号から引用元を開けます。引用元の一覧は、回答の最後に「出典」としてまとめて表示されます。</p>
+  <p>レスポンスビューの右上のボタンには、次の働きがあります。</p>
+  <ul>
+    <li><span class="icon-label">読み上げ：</span>オンにすると、回答を読み上げます。読み上げ中に押すと止まります。</li>
+    <li><span class="icon-label">コピー：</span>会話をクリップボードにコピーします。</li>
+    <li><span class="icon-label">共有：</span>保存のダイアログが開き、会話を PDF ファイルとして保存できます。</li>
+  </ul>
+  <p>左上の「テンプレート」から、プロンプトテンプレートを選んで実行できます（<a href="#templates">プロンプトテンプレート</a>）。<kbd>shift</kbd> キーを押しながら選ぶと、実行せずに内容をプロンプトビューに入れます。</p>
+
+  <h3 id="fusion">Fusion（複数の AI に相談）</h3>
+  <p>人のアイコンのボタンをオレンジにして質問すると、複数のモデルが Web を検索しながら同じ質問に答えます。分析役のモデルがそれらを比べたうえで、選んでいるモデルが 1 つの回答にまとめます。重要な質問や、意見が分かれそうな質問に向いています。</p>
+  <figure class="shot"><img src="../images/ja/fusion.png" alt="Fusion の回答。先頭に「Fusion: 各モデルの回答と分析」が折りたたまれて表示されている"></figure>
+  <p>回答の先頭の「▶ Fusion: 各モデルの回答と分析」を押すと、それぞれのモデルの回答と、一致した点・食い違った点などの分析を確かめられます。</p>
+  <figure class="shot"><img src="../images/ja/fusion-panel.png" alt="Fusion のパネルを開いたところ。モデルごとの回答が並んでいる"></figure>
+  <ul>
+    <li>答えるモデルの組み合わせは、「設定 &gt; 一般」の「Fusion のパネル」で選べます。</li>
+    <li>複数のモデルに問い合わせるので、費用は通常の 4〜5 倍ほどかかり、回答まで 1〜2 分かかることがあります。</li>
+    <li>テンプレートに <code>{{fusion}}</code> と書くと、そのテンプレートだけ Fusion を使います。</li>
+  </ul>
+
+  <h3 id="image">画像の生成と続けての編集</h3>
+  <p>画像を生成できるモデル（たとえば <code>google/gemini-3.1-flash-image</code>）を「設定 &gt; モデル」で追加して選び、「〜の絵を描いて」と頼むと、回答の中に画像が表示されます。続けて「その絵を青くして」のように頼むと、直前の画像をもとに描き直します。</p>
+  <figure class="shot"><img src="../images/ja/image-edit.png" alt="赤いりんごの絵を描かせたあと、「そのりんごを青くして」と頼んで青いりんごに描き直したところ"></figure>
+  <p>画像をクリックすると保存のダイアログが開き、画像をファイルとして保存できます。</p>
+
+  <h3 id="topics">トピックビューとアーカイブ</h3>
+  <p>トピックビューには、AI とやり取りした会話（トピック）の一覧が表示されます。トピックを選ぶと、その会話がレスポンスビューに表示され、続けて質問すると、その会話の文脈のまま対話できます。トピックの名前は、最初の質問と回答から自動で付けられます。</p>
+  <ul>
+    <li>トピックをダブルクリックすると、名前を変えられます。<kbd>delete</kbd> キーで削除できます。</li>
+    <li>トピックを右クリックすると、名前の変更・削除・アーカイブへの移動ができます。マウスを乗せると、そのトピックの費用の合計が表示されます。</li>
+    <li>上の検索欄に文字を入れると、名前と会話の内容から検索します。</li>
+    <li>トピックは「最大トピック数」に達すると古いものから自動で削除されますが、アーカイブに移したトピックは削除されません。</li>
+  </ul>
+  <p>チャットウィンドウ左下の箱のボタンを押すと、アーカイブウィンドウが開きます。アーカイブはカテゴリーごとに分かれていて、右クリックのメニューから、カテゴリーの名前の変更・削除や、トピックをトピックビューに戻す「アンアーカイブ」ができます。</p>
+</section>
+
+<section id="templates">
+  <h2>プロンプトテンプレート</h2>
+  <p>よく使うプロンプトは、テンプレートとして保存しておくと、メニューからすぐに実行できます。メニューは階層になっていて、カテゴリーごとに分けられます。テンプレートを呼び出す方法は 3 つあります。</p>
+  <ul>
+    <li><strong>サービスメニューから：</strong>ほかのアプリでテキストを選び、右クリックして「サービス &gt; aiMenu2...」を選ぶか、<a href="#shortcut">ショートカットキー</a>を押します。選んだテキストを使ってテンプレートが実行されます。</li>
+    <li><strong>ステータスメニューから：</strong>メニューバーの吹き出しのアイコン「ai」を押すと、プロンプトメニューが開きます。クリップボードの内容を使ってテンプレートが実行されます。</li>
+    <li><strong>チャットウィンドウから：</strong>レスポンスビューの左上の「テンプレート」から選びます。</li>
+  </ul>
+  <figure class="shot small"><img src="../images/ja/status-menu.png" alt="メニューバーの ai アイコンから開いたプロンプトメニュー"></figure>
+
+  <h3>テンプレートエディタ</h3>
+  <p>メニュー「ファイル &gt; テンプレートエディタを開く」を選ぶか、チャットウィンドウの「テンプレート」の右のボタンを押すと、テンプレートエディタが開きます。</p>
+  <figure class="shot"><img src="../images/ja/template-editor.png" alt="テンプレートエディタ。左にテンプレートの一覧、右にタイトル・モデル・プロンプト"></figure>
+  <ul>
+    <li>左の一覧で右クリックすると、テンプレートやカテゴリーを追加できます。左下の「＋」「−」でも追加・削除できます。</li>
+    <li>右側で、タイトル、使うモデル、プロンプトを入力します。モデルを指定しないと、そのときチャットウィンドウで選んでいるモデルを使います。</li>
+    <li>「新トピックにする」をオンにすると、実行する前にそれまでの会話の文脈をクリアします。</li>
+    <li>「実行する」をオンにすると、すぐに実行します。オフにすると、プロンプトビューに内容を入れるだけで、実行はしません。</li>
+  </ul>
+
+  <h3>マクロ</h3>
+  <p>プロンプトに次のマクロを書くと、実行するときに置き換えたり、動作を切り替えたりします。プロンプトの欄で右クリックすると、メニューから挿入できます。</p>
+  <table class="macros">
+    <tr><th>マクロ</th><th>働き</th></tr>
+    <tr><td><code>{{clipboard}}</code></td><td>選んだテキスト、またはクリップボードのテキストに置き換えます。</td></tr>
+    <tr><td><code>{{copy response}}</code></td><td>回答をクリップボードにコピーします。</td></tr>
+    <tr><td><code>{{speech response}}</code></td><td>回答を読み上げます。</td></tr>
+    <tr><td><code>{{hide thinking}}</code></td><td>推論するモデルの思考の過程を表示しません。</td></tr>
+    <tr><td><code>{{effort high}}</code></td><td>推論の強さを指定します。<code>none</code>・<code>low</code>・<code>medium</code>・<code>high</code>・<code>max</code> が使えます。</td></tr>
+    <tr><td><code>{{fusion}}</code></td><td>そのテンプレートだけ Fusion を使います。</td></tr>
+    <tr><td><code>{{compact window}}</code></td><td>チャットウィンドウを小さな表示にします（<code>{{minimize window}}</code> も同じ）。</td></tr>
+    <tr><td><code>{{normal window}}</code></td><td>チャットウィンドウを通常の表示に戻します。</td></tr>
+  </table>
+</section>
+
+<section id="usage">
+  <h2>使用額の確認</h2>
+  <p>メニュー「ファイル &gt; 使用額…」を選ぶと、次の情報がまとめて表示されます。「OpenRouter の利用履歴を開く」を押すと、OpenRouter のサイトで詳しい利用履歴を確かめられます。</p>
+  <ul>
+    <li>OpenRouter のクレジット残高と、これまでの購入額・使用額</li>
+    <li>今の API キーの、今日・今週・今月の使用額と、上限・有効期限</li>
+    <li>aiMenu2 が記録した、月ごとの費用の合計（保存しているトピックとアーカイブの分）</li>
+  </ul>
+</section>
+
+<section id="help">
+  <h2>困ったときは</h2>
+  <dl>
+    <dt>質問しても答えが返ってこない</dt>
+    <dd>OpenRouter のクレジット残高と、API キーの上限・有効期限を「ファイル &gt; 使用額…」で確かめてください。別のモデルや、新しいトピックで試すと答えが返ることもあります。</dd>
+    <dt>ショートカットキーを押しても何も起きない</dt>
+    <dd>「システム設定」のサービスで「aiMenu2...」がオンになっているか、アプリのショートカットのメニュータイトルが <code>aiMenu2...</code>（ピリオド 3 つ）になっているかを確かめてください。</dd>
+    <dt>音声入力が使えない</dt>
+    <dd>「システム設定 &gt; プライバシーとセキュリティ &gt; マイク」で、aiMenu2 にマイクの使用を許可してください。</dd>
+  </dl>
+  <p>そのほかのご質問や不具合のご報告は、<a href="https://cometheart314.github.io/aiMenu2-docs/ja/#support">aiMenu2 サポートページ</a>からお寄せください。メニュー「ヘルプ &gt; aiMenu2 サポートページ」からも開けます。</p>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2026 Artman21 Inc.<br>
+  <a href="./">aiMenu2 トップ</a> &middot; <a href="privacy.html">プライバシーポリシー</a> &middot; <a href="terms.html">利用規約</a>
+</footer>
+
+</body>
+</html>
