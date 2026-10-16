@@ -190,3 +190,5 @@ dl.faq dd { margin: 4px 0 0 0; }
 main p + p, main ul + p, main table + p, main p + ul { margin-top: 12px; }
 section h3 { font-size: 18px; color: #0f3460; margin: 28px 0 8px; }
 .callout + p { margin-top: 12px; }
+/* 見出しの下の説明文を、広い画面では1行に収める（狭い画面では折り返す） */
+header p { max-width: 800px; }
