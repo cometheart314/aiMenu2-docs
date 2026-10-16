@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aiMenu2 Support</title>
+<meta name="description" content="aiMenu2 is a Mac utility that lets you call more than 300 generative AI models from any app with a single shortcut key.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <a href="../ja/">日本語</a>
+  <a href="#start">Getting Started</a>
+  <a href="#support">Support</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Use</a>
+</nav>
+
+<header>
+  <img class="appicon" src="../appicon.png" alt="aiMenu2 icon">
+  <h1>aiMenu2</h1>
+  <p>Select, press, ask AI. More than 300 generative AI models from anywhere on your Mac.</p>
+</header>
+
+<main>
+
+<section>
+  <h2>About aiMenu2</h2>
+  <p>aiMenu2 is a Mac utility that calls an AI assistant with a single shortcut key on text you select in any app, such as Mail, a browser, an editor, or a spreadsheet. It comes with menus such as “Translate”, “Look up”, “Proofread”, and “Summarize”, and you can add your own prompts freely.</p>
+  <p>aiMenu2 sends your requests through <a href="https://openrouter.ai/">OpenRouter</a>. With one account, you can choose from more than 300 models, including ChatGPT, Claude, Gemini, Perplexity, DeepSeek, and Grok, to fit your purpose and budget.</p>
+  <a class="btn" href="https://apps.apple.com/app/aimenu2/id6744962163">Download on the Mac App Store</a>
+  <p class="license-note">You can try aiMenu2 free for 7 days after installing it (<a href="#price">pricing</a>).</p>
+</section>
+
+<section>
+  <h2>Features</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <h3>Works from any app</h3>
+      <p>Select text and press the shortcut key to send a prompt with that text to AI. You can also use the Services menu or the menu bar.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Prompt templates</h3>
+      <p>Save the prompts you use often as templates and call them from a hierarchical menu. Macros automate inserting the clipboard, copying or reading out the response, and more.</p>
+    </div>
+    <div class="feature-card">
+      <h3>300+ models and Auto</h3>
+      <p>Pick a model from the list. With “Auto”, OpenRouter chooses a suitable model for each question. You can also tell OpenRouter to prefer the lowest price or the highest speed.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Fusion (ask several AIs)</h3>
+      <p>Several models answer the same question while searching the web, an analyst compares their answers, and the model you selected combines them into one response. You can also check each model's answer and the analysis.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Image generation and editing</h3>
+      <p>Ask an image model to “draw ...” and the image appears in the response. You can keep asking for changes, such as “make it blue”. Click an image to save it.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Read aloud and voice input</h3>
+      <p>Responses can be read aloud with macOS voices or high-quality OpenRouter voices. Voice input turns what you say into text and adds it to the prompt each time you pause.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Image and PDF attachments</h3>
+      <p>Attach images or PDFs to a prompt. For models that cannot read PDFs directly, OpenRouter converts the PDF to text.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Cost display</h3>
+      <p>Each response ends with the model name and its cost in dollars and yen. You can also check the total for each topic, monthly totals, and your credit balance.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Topic history and archives</h3>
+      <p>Conversations are saved as topics so you can continue them later. Keep important conversations in the archives. Save them to iCloud to share them between Macs.</p>
+    </div>
+  </div>
+</section>
+
+<section id="start">
+  <h2>Getting Started</h2>
+  <p>To use aiMenu2, you need an OpenRouter account and credits (prepaid AI usage fees).</p>
+  <ol class="steps">
+    <li>Create an account at <a href="https://openrouter.ai/">OpenRouter</a> and buy credits on the <a href="https://openrouter.ai/settings/credits">Credits</a> page.</li>
+    <li>In aiMenu2, open Settings &gt; General and click “<strong>Log in to OpenRouter…</strong>” above the API key field.</li>
+    <li>OpenRouter opens in your browser. Log in and authorize aiMenu2. When you return to aiMenu2, the API key is set automatically.</li>
+    <li>Choose a model from the menu at the bottom of the chat window. If you are not sure, choose “Auto”.</li>
+  </ol>
+  <div class="callout">
+    <strong>Limit and expiration on the authorization page:</strong> On OpenRouter's authorization page, you can set a spending limit and an expiration date for the new API key. If you do, aiMenu2 can no longer use AI when the limit is reached or the key expires. You can change them later at <a href="https://openrouter.ai/settings/keys">openrouter.ai/settings/keys</a>.
+  </div>
+  <p class="note">You can also create an API key on OpenRouter's <a href="https://openrouter.ai/settings/keys">Keys</a> page and paste it into the API key field in Settings.</p>
+</section>
+
+<section>
+  <h2>How to Use</h2>
+
+  <h3 style="margin-top:8px">Template macros</h3>
+  <p>Write these macros in a template prompt to insert text or change how the request is handled. You can also insert them from the context menu of the template editor.</p>
+  <table class="macros">
+    <tr><th>Macro</th><th>What it does</th></tr>
+    <tr><td><code>{{clipboard}}</code></td><td>Replaced with the text on the clipboard (the text you selected).</td></tr>
+    <tr><td><code>{{copy response}}</code></td><td>Copies the response to the clipboard.</td></tr>
+    <tr><td><code>{{speech response}}</code></td><td>Reads the response aloud.</td></tr>
+    <tr><td><code>{{hide thinking}}</code></td><td>Hides the thinking process of reasoning models.</td></tr>
+    <tr><td><code>{{effort high}}</code></td><td>Sets the reasoning effort. You can use <code>none</code>, <code>low</code>, <code>medium</code>, <code>high</code>, or <code>max</code>.</td></tr>
+    <tr><td><code>{{fusion}}</code></td><td>Uses Fusion for this template only.</td></tr>
+    <tr><td><code>{{compact window}}</code></td><td>Makes the chat window compact (<code>{{minimize window}}</code> does the same).</td></tr>
+    <tr><td><code>{{normal window}}</code></td><td>Returns the chat window to the normal layout.</td></tr>
+  </table>
+
+  <h3>Fusion</h3>
+  <p>Click the people icon (Fusion button) at the bottom of the chat window to turn it orange, and your next questions use Fusion. Each model's answer and the analysis appear, collapsed, at the top of the response.</p>
+  <ul>
+    <li>In Settings &gt; General, “Fusion panel” lets you choose Quality (larger models) or Speed (lighter models).</li>
+    <li>Because several models are asked, Fusion costs about 4–5 times as much as a normal request, and a response can take a minute or two.</li>
+  </ul>
+
+  <h3>Voice input</h3>
+  <ul>
+    <li>Click the microphone button, or press the <kbd>control</kbd> key twice, to start recording.</li>
+    <li>Two seconds after you stop speaking, that part is turned into text and added to the prompt, and recording continues.</li>
+    <li>While recording, click or press <kbd>control</kbd> once to split right away.</li>
+    <li>Double-click or press <kbd>control</kbd> twice to stop recording.</li>
+  </ul>
+
+  <h3>Checking costs</h3>
+  <ul>
+    <li>Each response ends with the cost of that request. From the second response on, the topic total is shown too.</li>
+    <li>File &gt; Usage and Costs… shows your OpenRouter credit balance, the API key's usage today, this week, and this month, and the monthly totals recorded by aiMenu2.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>FAQ</h2>
+  <dl class="faq">
+    <dt>Are there costs besides the aiMenu2 subscription?</dt>
+    <dd>Yes. AI usage fees are deducted from your OpenRouter credits for each request. Prices vary widely by model, and some models are free.</dd>
+
+    <dt>I get no response to my question.</dt>
+    <dd>Check your OpenRouter credit balance and any limit or expiration date on your API key. File &gt; Usage and Costs… shows them all. Trying another model or a new topic may also help.</dd>
+
+    <dt>Voice input does not work.</dt>
+    <dd>Allow aiMenu2 to use the microphone in System Settings &gt; Privacy &amp; Security &gt; Microphone.</dd>
+
+    <dt>How do I share my history between Macs?</dt>
+    <dd>Turn on “Save Topics to iCloud” in Settings &gt; General. Version 1.05 uses a new storage format, so new and older versions of aiMenu2 keep separate histories. Update aiMenu2 on all your Macs.</dd>
+  </dl>
+</section>
+
+<section id="price">
+  <h2>Pricing</h2>
+  <p>aiMenu2 is available as a monthly or yearly subscription. The price is shown in the App Store for your country. You can try aiMenu2 free for 7 days after installing it.</p>
+  <p>Subscriptions renew automatically unless auto-renewal is turned off at least 24 hours before the end of the current period. You can cancel at any time in the App Store or in System Settings &gt; Apple Account &gt; Subscriptions. See the <a href="terms.html">Terms of Use</a> for details.</p>
+  <p class="note">AI usage fees are paid to OpenRouter separately.</p>
+</section>
+
+<section>
+  <h2>System Requirements</h2>
+  <ul>
+    <li>macOS 13.5 or later</li>
+    <li>Apple silicon or Intel processor</li>
+    <li>An internet connection and an OpenRouter account</li>
+  </ul>
+</section>
+
+<section id="support">
+  <h2>Support</h2>
+  <p>Please report bugs, request features, or ask questions on GitHub Issues.</p>
+  <a class="btn" href="https://github.com/cometheart314/aiMenu2-docs/issues/new">Create an issue</a>
+  <a class="btn btn-secondary" href="https://github.com/cometheart314/aiMenu2-docs/issues">See existing issues</a>
+  <p class="note">Issues are public. Do not include personal information such as API keys or email addresses. You need a GitHub account to create an issue.</p>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2026 Artman21 Inc.<br>
+  <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a>
+</footer>
+
+</body>
+</html>

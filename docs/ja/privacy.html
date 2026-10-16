@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー - aiMenu2</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav>
+  <a href="../en/privacy.html">English</a>
+  <a href="./">aiMenu2 トップ</a>
+  <a href="terms.html">利用規約</a>
+</nav>
+<header>
+  <h1>プライバシーポリシー</h1>
+  <p>aiMenu2 のプライバシーに関する方針</p>
+</header>
+<main>
+  <section>
+    <h2>概要</h2>
+    <p>aiMenu2（以下「本アプリ」）は、合資会社アートマン弐壱（以下「当社」）が提供する macOS 用アプリケーションです。当社はユーザーのプライバシーを尊重します。本アプリは当社のサーバーに接続せず、当社がユーザーの個人情報やプロンプトの内容を収集することはありません。</p>
+    <p>ただし、本アプリは AI の機能を提供するために、ユーザーが入力・選択した内容を、ユーザー自身の OpenRouter アカウントを通じて AI サービスに送信します。詳しくは以下をご覧ください。</p>
+  </section>
+
+  <section>
+    <h2>当社が収集しない情報</h2>
+    <p>当社は、本アプリを通じて以下の情報を<strong>収集しません</strong>：</p>
+    <ul>
+      <li>個人を特定できる情報（氏名、メールアドレス等）</li>
+      <li>プロンプト、AI の回答、添付した画像・PDF、音声の内容</li>
+      <li>OpenRouter の API キー</li>
+      <li>位置情報、連絡先、カレンダーのデータ</li>
+      <li>アプリの起動回数・利用状況などの統計情報</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>OpenRouter と AI サービスへの送信</h2>
+    <p>本アプリは、AI への問い合わせに <a href="https://openrouter.ai/">OpenRouter</a> を使用します。ユーザーが問い合わせを送信したときに限り、次の内容が OpenRouter に送信されます。</p>
+    <ul>
+      <li>プロンプト、システムプロンプト、同じトピックの会話の履歴</li>
+      <li>ユーザーが添付した画像・PDF、および続けて編集するために送る生成画像</li>
+      <li>トピック名を自動で付けるための、最初の質問と回答</li>
+    </ul>
+    <p>OpenRouter は、ユーザーが選んだモデルを提供する AI 事業者（OpenAI、Anthropic、Google など）に内容を転送します。Fusion を使った場合は、複数の AI 事業者に転送されます。これらの送信は、OpenRouter および各 AI 事業者のプライバシーポリシーと利用規約に従います。当社がこれらの内容にアクセスすることはありません。</p>
+    <p>OpenRouter の設定で、データを保持しない事業者だけを使うように制限することもできます。詳しくは <a href="https://openrouter.ai/privacy">OpenRouter のプライバシーポリシー</a>をご覧ください。</p>
+  </section>
+
+  <section>
+    <h2>音声入力と読み上げ</h2>
+    <ul>
+      <li><strong>音声入力：</strong>ユーザーが音声入力を始めたときに限り、マイクの音声を録音し、文字に起こすために OpenRouter に送信します。録音は文字に起こしたあとに削除します。マイクの使用には、macOS の許可が必要です。</li>
+      <li><strong>読み上げ：</strong>読み上げエンジンに macOS を選んだ場合、通信は発生しません。OpenRouter を選んだ場合は、読み上げる文章を OpenRouter に送信し、合成された音声を受け取ります。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>OpenRouter へのログイン</h2>
+    <p>「OpenRouter にログイン…」を使った場合、ブラウザで OpenRouter のログイン画面が開きます。ログインは OpenRouter のサイトで行われ、本アプリがパスワードを扱うことはありません。許可されると、本アプリは OpenRouter から API キーを受け取ります。そのため、ログインの間だけ、同じ Mac の中からの接続に限って受け付ける受け口（<code>localhost</code>）を開きます。</p>
+  </section>
+
+  <section>
+    <h2>そのほかの通信</h2>
+    <ul>
+      <li><strong>為替レート：</strong>費用を円で表示するために、<a href="https://frankfurter.dev/">Frankfurter</a> から米ドルと円の為替レートを取得します。個人情報は送信しません。</li>
+      <li><strong>表示用のライブラリ：</strong>回答を表示するためのライブラリ（Markdown・数式・コードの表示）を、CDN（jsDelivr、cdnjs）から読み込みます。</li>
+      <li><strong>購入：</strong>サブスクリプションの購入と確認は、Apple の App Store を通じて行われます。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Mac の中に保存するデータ</h2>
+    <ul>
+      <li>設定と OpenRouter の API キーは、お使いの Mac の中に保存されます。</li>
+      <li>会話の履歴（トピックとアーカイブ）は、お使いの Mac の中に保存されます。設定で iCloud への保存をオンにした場合は、ユーザーの iCloud Drive に保存され、Apple のプライバシーポリシーに従って管理されます。当社が iCloud 上のデータにアクセスすることはありません。</li>
+      <li>本アプリが異常終了した場合の記録は、お使いの Mac の中に保存されるだけで、外部には送信されません。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>お問い合わせ</h2>
+    <p>プライバシーに関するご質問は、<a href="https://github.com/cometheart314/aiMenu2-docs/issues">GitHub の Issues</a>、または アートマン21 ユーザーサポート係（<a href="mailto:support@artman21.co.jp">support@artman21.co.jp</a>）までお願いします。Issues の内容は公開されるので、個人情報を含むお問い合わせはメールをご利用ください。</p>
+  </section>
+
+  <p style="margin-top: 48px; font-size: 13px; color: #888;">最終更新日: 2026年10月16日</p>
+</main>
+<footer>
+  &copy; 2026 Artman21 Inc.<br>
+  <a href="./">aiMenu2 トップ</a> &middot; <a href="terms.html">利用規約</a>
+</footer>
+</body>
+</html>
